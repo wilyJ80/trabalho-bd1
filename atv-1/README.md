@@ -7,6 +7,17 @@
 
 - [ ] 6) Insira registros em algumas tabelas.
 
+```sql
+INSERT INTO agentes (nome, datacontratacao) 
+VALUES ('Matheus', '2001-04-04');
+
+INSERT INTO cidades (nome, idestado) 
+values ('Camacari', 1);
+
+INSERT INTO marcas (nome) 
+VALUES ('koenigsegg');
+```
+
 ---
 
 - [x] 7) Altere em combustível o registro onde nome ="alcool" para nome="álcool". (ou vice-versa) 
