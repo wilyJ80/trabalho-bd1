@@ -5,7 +5,7 @@
 
 ---
 
-- [ ] 6) Insira registros em algumas tabelas.
+- [x] 6) Insira registros em algumas tabelas.
 
 ```sql
 INSERT INTO agentes (nome, datacontratacao) 
@@ -67,8 +67,21 @@ AND date(datahora) <= '2009-03-31';
 
 ---
 
-- [ ] 12) Exiba placa, idmodelo e idcor dos veículos que a placa começa com JRO. 
+- [x] 12) Exiba placa, idmodelo e idcor dos veículos que a placa começa com JRO. 
+
+```sql
+SELECT placa, idmodelo, idcor 
+FROM veiculos 
+WHERE placa LIKE 'JRO%';
+```
 
 ---
 
-- [ ] 13) Exiba placa, idmodelo e idcor dos veículos que a placa tem o terceiro dígito Z e termina com 9. 
+- [x] 13) Exiba placa, idmodelo e idcor dos veículos que a placa tem o terceiro dígito Z e termina com 9. 
+
+```sql
+SELECT placa, idmodelo, idcor 
+FROM veiculos 
+WHERE placa LIKE '__Z%' 
+AND placa LIKE '%9';
+```
