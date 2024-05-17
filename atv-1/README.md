@@ -18,6 +18,8 @@ INSERT INTO marcas (nome)
 VALUES ('koenigsegg');
 ```
 
+![q6](./q6.png)
+
 ---
 
 - [x] 7) Altere em combustível o registro onde nome ="alcool" para nome="álcool". (ou vice-versa) 
@@ -28,6 +30,8 @@ SET nome = 'Alcool'
 WHERE nome LIKE '%lcool';
 ```
 
+![q7](./q7.png)
+
 ---
 
 - [x] 8) Liste o nome dos modelos da marca 3.
@@ -36,6 +40,8 @@ WHERE nome LIKE '%lcool';
 SELECT * FROM modelos 
 WHERE idmarca = 3;
 ```
+
+![q8](./q8.png)
 
 ---
 
@@ -46,6 +52,10 @@ SELECT renavam, date(datahora), idtipoinfracao FROM infracoes
 WHERE date(datahora) >= '2009-04-01';
 ```
 
+![q9](./q9-1.png)
+
+![q92](./q9-2.png)
+
 ---
 
 - [x] 10) Liste o renavam e data das infrações que ocorreram a partir do dia 01/04/2009 e tipo de infração igual a 5. 
@@ -54,6 +64,8 @@ WHERE date(datahora) >= '2009-04-01';
 SELECT renavam, date(datahora) FROM infracoes 
 WHERE date(datahora) >= '2009-04-01' AND idtipoinfracao = 5;
 ```
+
+![q10](./q10.png)
 
 ---
 
@@ -65,6 +77,8 @@ WHERE date(datahora) >= '2009-03-01'
 AND date(datahora) <= '2009-03-31';
 ```
 
+![q11](./q11.png)
+
 ---
 
 - [x] 12) Exiba placa, idmodelo e idcor dos veículos que a placa começa com JRO. 
@@ -74,6 +88,8 @@ SELECT placa, idmodelo, idcor
 FROM veiculos 
 WHERE placa LIKE 'JRO%';
 ```
+
+![q12](./q12.png)
 
 ---
 
@@ -85,3 +101,5 @@ FROM veiculos
 WHERE placa LIKE '__Z%' 
 AND placa LIKE '%9';
 ```
+
+![q13](./q13.png)
