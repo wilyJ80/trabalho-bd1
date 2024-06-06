@@ -68,7 +68,14 @@ AND date(i.datahora) BETWEEN '2009-03-01' AND '2009-03-31';
 
 4) Exiba placa, nome do modelo e a nome da cor dos veículos que a placa começa com JRO. 
 
- 
+```sql
+SELECT v.placa, m.nome as 'nome do modelo', c.nome as 'nome da cor'
+from veiculos v 
+join modelos m on m.idmodelo = v.idmodelo 
+join cores c on c.idcor = v.idcor 
+WHERE
+v.placa LIKE 'JRO%';
+```
 
 5) Exiba placa, nome do modelo e a nome da cor dos veículos que a placa tem o terceiro dígito Z e termina com 9. 
 
