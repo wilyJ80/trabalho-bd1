@@ -46,11 +46,25 @@ where i.datahora >= '2009-04-01';
 
 2) Liste o renavam, a placa do veículo e data das infrações que ocorreram a partir do dia 01/04/2009 e tipo de infração igual a 5. 
 
- 
+```sql 
+select i.renavam, v.placa, date(i.datahora) as data
+from infracoes i
+join veiculos v on v.renavam = i.renavam 
+join tiposinfracoes t on t.idtipoinfracao = i.idtipoinfracao
+where date(i.datahora) >= '2009-04-01'
+AND i.idtipoinfracao = 5;
+```
 
 3) Liste o renavam, o nome do proprietário e data das infrações que ocorreram entre os dias 01/03/2009 e 31/03/2009 e tipo de infração igual a 5 
 
- 
+```sql
+select v.renavam, p.nome, date(i.datahora) as data 
+from infracoes i
+join veiculos v on v.renavam = i.renavam 
+join proprietarios p on p.cpf = v.cpf  
+where i.idtipoinfracao = 5
+AND date(i.datahora) BETWEEN '2009-03-01' AND '2009-03-31';
+```
 
 4) Exiba placa, nome do modelo e a nome da cor dos veículos que a placa começa com JRO. 
 
@@ -73,6 +87,3 @@ where i.datahora >= '2009-04-01';
  
 
 9) Mostre a quantidade de infrações de cada tipo de infração (exiba o nome do tipo de infração) ocorrida em 2009 somente para tipos de infrações que a quantidade seja maior do que 5. 
-
-QUESTAO 1 ------
-select renavam, date(datahora) from infracoes where date(datahora) >= '2009-04-01';
