@@ -36,7 +36,13 @@ veiculos_has_combustiveis(renavam, idcombustivel)
 
 1) Liste o renavam, a placa do veículo, data e nome do tipo de infracao das infrações que ocorreram a partir do dia 01/04/2009. 
 
- 
+```sql
+select i.renavam , v.placa , date(i.datahora), t.descricao
+from infracoes i
+join veiculos v on i.renavam = v.renavam
+join tiposinfracoes t on i.idtipoinfracao = t.idtipoinfracao 
+where i.datahora >= '2009-04-01';
+```
 
 2) Liste o renavam, a placa do veículo e data das infrações que ocorreram a partir do dia 01/04/2009 e tipo de infração igual a 5. 
 
@@ -67,3 +73,6 @@ veiculos_has_combustiveis(renavam, idcombustivel)
  
 
 9) Mostre a quantidade de infrações de cada tipo de infração (exiba o nome do tipo de infração) ocorrida em 2009 somente para tipos de infrações que a quantidade seja maior do que 5. 
+
+QUESTAO 1 ------
+select renavam, date(datahora) from infracoes where date(datahora) >= '2009-04-01';
