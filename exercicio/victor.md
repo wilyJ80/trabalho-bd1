@@ -30,7 +30,7 @@ GROUP BY
 
 ```
 
-** Da 3 em diante: possível assunto de prova **
+**Da 3 em diante: possível assunto de prova**
 
 3) Liste o nome do produto e a soma da quantidade de produtos comprados no período de 01/01/2010 até 30/06/2010.
 
