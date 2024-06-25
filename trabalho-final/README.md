@@ -1,3 +1,5 @@
+![](bdSQL.svg)
+
 # Requisitos mínimos do sistema (2ª etapa) 
 
 ## 1 banco de dados em funcionamento com os ajustes indicados na 1ª etapa do projeto 
