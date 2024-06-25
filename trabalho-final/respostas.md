@@ -1,18 +1,18 @@
 - INSERT, no mínimo 15 registros em cada tabela (se possível).
 
 - [X] Ator
-- [ ] Avaliacao
+- [ ] Avaliacao -- TODO ...
 - [X] Categoria do premio
 - [X] Classificacao indicativa
 - [X] Diretor
-- [ ] Dublagem
-- [ ] Elenco
-- [ ] Espectador
-- [ ] Filme
-- [ ] Filme_has_genero
+- [ ] Dublagem -- TODO: terminar filmes! Dublagens devem corresponder ao idioma das avaliações! Esse é o campo mais importante para preencher os demais
+- [ ] Elenco -- TODO ...
+- [X] Espectador
+- [ ] Filme -- TODO ...
+- [ ] Filme_has_genero -- TODO ...
 - [X] Genero
 - [X] Idioma
-- [ ] Legenda
+- [ ] Legenda -- TODO ...
 - [X] Pais
 - [ ] Premio
 - [X] Produtora
@@ -66,7 +66,12 @@ INSERT INTO `mydb`.`ator` (`idator`, `nome`) VALUES
 (27, 'Danai Gurira'),
 (28, 'Pom Klementieff'),
 (29, 'Tessa Thompson'),
-(30, 'Evangeline Lilly');
+(30, 'Evangeline Lilly'),
+(31, 'Leonardo DiCaprio'),
+(32, 'Cillian Murphy'),
+(33, 'John Hardy'),
+(34, 'Ken Watanabe'),
+(35, 'Andrew Garfield');
 
 INSERT INTO `mydb`.`categoria_do_premio` (`idcategoria_do_premio`, `nome_categoria`) VALUES
 (1, 'Melhor Filme'),
@@ -142,7 +147,8 @@ INSERT INTO `mydb`.`pais` (`idpais`, `nome`) VALUES
 (12, 'Índia'),
 (13, 'Bangladesh'),
 (14, 'Turquia'),
-(15, 'Vietnã');
+(15, 'Vietnã'),
+(16, 'Brasil');
 
 INSERT INTO `mydb`.`idioma` (`ididioma`, `nome_idioma`) VALUES
 (1, 'Inglês'),
@@ -181,6 +187,71 @@ INSERT INTO `mydb`.`produtora` (`idprodutora`, `nome`, `pais_sede_idpais`) VALUE
 (17, 'Mediapro', 2), 
 (18, 'Miramax', 1), 
 (19, 'Warner Bros. Pictures', 1), 
-(20, 'Universal Pictures', 1);
+(20, 'Universal Pictures', 1),
+(21, 'Sony Pictures', 1);
+
+INSERT INTO `mydb`.`espectador` (`idespectador`, `nome`, `idade`, `n_filmes_assistidos`, `pais_idpais`) VALUES
+(1, 'Victor', 24, 12, 16),
+(2, 'Alysson', 18, 42, 16),
+(3, 'Kaik', 19, 117, 16),
+(4, 'Pedro', 49, 12, 16),
+(5, 'John', 18, 122, 1),
+(6, 'François', 29, 16, 3),
+(7, 'Muhammad', 33, 23, 11),
+(8, 'Adi', 16, 44, 12),
+(9, 'Ronald', 56, 3, 1),
+(10, 'Huang', 22, 20, 9),
+(11, 'Akane', 26, 88, 8),
+(12, 'Yuna', 21, 2, 8),
+(13, 'Sveta', 41, 32, 7),
+(14, 'Vladimir', 44, 181, 7),
+(15, 'Gottfried', 17, 18, 4),
+(16, 'Jochem', 29, 4, 4),
+(17, 'Samara', 37, 1, 16);
+
+INSERT INTO `mydb`.`filme` (`idfilme`, `nome`, `duracao`, `ano_lancamento`, `descricao`, `classificacao_indicativa_idclassificacao_indicativa`, `produtora_idprodutora`, `diretor_principal_iddiretor`, `roteirista_principal_idroteirista`) VALUES
+(1, 'Inception', 148, 2010, 'A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a CEO.', 5, 5, 2, 2),
+(2, 'Jurassic Park', 127, 1993, 'During a preview tour, a theme park suffers a major power breakdown that allows its cloned dinosaur exhibits to run amok.', 3, 1, 1, 1),
+(3, 'Pulp Fiction', 154, 1994, 'The lives of two mob hitmen, a boxer, a gangster and his wife, and a pair of diner bandits intertwine in four tales of violence and redemption.', 6, 4, 4, 3),
+(4, 'The Social Network', 120, 2010, 'The story of the founders of the social-networking website, Facebook.', 4, 2, 3, 1),
+(5, 'Avatar', 162, 2009, 'A paraplegic Marine dispatched to the moon Pandora on a unique mission becomes torn between following his orders and protecting the world he feels is his home.', 5, 5, 5, 4);
+
+-- Acima foi só para exemplo, vale a pena tentar melhorar
+
+INSERT INTO `mydb`.`avaliacao` (`idavaliacao`, `nota`, `comentario`,`espectador_idespectador`, `filme_idfilme`) VALUES
+(1, 1, 'Não gostei muito. Acho que filmes devem ser mais sutis e ter uma temática mais relevante.', 1, 1),
+(2, 3, 'Abordar uma temática tão comum é um grande desafio, que o presente filme simplesmente não consegue.', 1, 4),
+(3, 8, 'An absolute blast. I dont think it gets any better than this!', 5, 5),
+(4, 10, 'Sinceramente, eu espero que os filmes dos dias atuais possam seguir esse mesmo padrão de qualidade.', 2, 5),
+(5, 0, 'Onde já se viu um filme ser tão ruim assim?', 3, 3);
+
+INSERT INTO `mydb`.`dublagem` (`idioma_ididioma`, `filme_idfilme`) VALUES
+(6, 1),
+(6, 3),
+(6, 4),
+(6, 1);
+
+INSERT INTO `mydb`.`elenco` (`filme_idfilme`, `ator_idator`) VALUES
+(1, 31),
+(1, 32),
+(1, 33),
+(1, 34),
+(4, 35);
+
+INSERT INTO `mydb`.`filme_has_genero` (`filme_idfilmes`, `genero_idgenero`) VALUES
+(1, 1),
+(1, 4),
+(2, 8),
+(2, 4),
+(2, 5);
+
+INSERT INTO `mydb`.`legenda` (`idioma_ididioma`, `filme_idfilme`) VALUES
+(6, 1),
+(6, 2),
+(1, 1),
+(1, 2),
+(1, 3),
+(1, 4),
+(1, 5);
 
 ```
