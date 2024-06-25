@@ -1,5 +1,6 @@
 - INSERT, no mínimo 15 registros em cada tabela (se possível).
 
+   - Evitar duplicação?
 
 ```sql
 INSERT INTO `mydb`.`roteirista` (`idroteirista`, `nome`) VALUES
@@ -56,7 +57,12 @@ INSERT INTO `mydb`.`categoria_do_premio` (`idcategoria_do_premio`, `nome_categor
 (7, 'Melhor Fotografia'),
 (8, 'Melhor Edição'),
 (9, 'Melhor Trilha Sonora'),
-(10, 'Melhor Filme Estrangeiro');
+(10, 'Melhor Filme Estrangeiro'),
+(11, 'Melhor Filme de Animação'),
+(12, 'Melhor Canção Original'),
+(13, 'Melhor Ator Coadjuvante'),
+(14, 'Melhor Atriz Coadjuvante'),
+(15, 'Melhor Direção de Arte');
 
 INSERT INTO `mydb`.`classificacao_indicativa` (`idclassificacao_indicativa`, `idade_minima`, `cor`, `descricao`) VALUES
 (1, 0, 'Verde', 'Livre para todos os públicos'),
@@ -65,6 +71,7 @@ INSERT INTO `mydb`.`classificacao_indicativa` (`idclassificacao_indicativa`, `id
 (4, 14, 'Laranja', 'Não recomendado para menores de 14 anos'),
 (5, 16, 'Vermelho', 'Não recomendado para menores de 16 anos'),
 (6, 18, 'Preto', 'Não recomendado para menores de 18 anos');
+-- Não é possível adicionar mais registros nessa tabela
 
 INSERT INTO `mydb`.`diretor` (`iddiretor`, `nome`) VALUES
 (1, 'Quentin Tarantino'),
@@ -76,7 +83,11 @@ INSERT INTO `mydb`.`diretor` (`iddiretor`, `nome`) VALUES
 (7, 'Wes Anderson'),
 (8, 'Sofia Coppola'),
 (9, 'Noah Baumbach'),
-(10, 'Guillermo del Toro');
+(10, 'Guillermo del Toro'),
+(11, 'Martin Scorsese'),
+(12, 'Steven Spielberg'),
+(13, 'Akira Kurosawa'),
+(15, 'Tim Burton');
 
 INSERT INTO `mydb`.`genero` (`idgenero`, `nome`) VALUES
 (1, 'Ação'),
