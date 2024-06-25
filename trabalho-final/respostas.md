@@ -1,6 +1,22 @@
 - INSERT, no mínimo 15 registros em cada tabela (se possível).
 
-   - Evitar duplicação?
+- [X] Ator
+- [ ] Avaliacao
+- [X] Categoria do premio
+- [X] Classificacao indicativa
+- [X] Diretor
+- [ ] Dublagem
+- [ ] Elenco
+- [ ] Espectador
+- [ ] Filme
+- [ ] Filme_has_genero
+- [X] Genero
+- [X] Idioma
+- [ ] Legenda
+- [X] Pais
+- [ ] Premio
+- [X] Produtora
+- [X] Roteirista
 
 ```sql
 INSERT INTO `mydb`.`roteirista` (`idroteirista`, `nome`) VALUES
@@ -13,7 +29,12 @@ INSERT INTO `mydb`.`roteirista` (`idroteirista`, `nome`) VALUES
 (7, 'Wes Anderson'),
 (8, 'Sofia Coppola'),
 (9, 'Noah Baumbach'),
-(10, 'Guillermo del Toro');
+(10, 'Guillermo del Toro'),
+(11, 'James Cameron'),
+(12, 'Paul Schrader'),
+(13, 'David Lynch'),
+(14, 'Peter Jackson'),
+(15, 'George Lucas');
 
 INSERT INTO `mydb`.`ator` (`idator`, `nome`) VALUES
 (1, 'Robert Downey Jr.'),
@@ -71,7 +92,7 @@ INSERT INTO `mydb`.`classificacao_indicativa` (`idclassificacao_indicativa`, `id
 (4, 14, 'Laranja', 'Não recomendado para menores de 14 anos'),
 (5, 16, 'Vermelho', 'Não recomendado para menores de 16 anos'),
 (6, 18, 'Preto', 'Não recomendado para menores de 18 anos');
--- Não é possível adicionar mais registros nessa tabela
+-- Não é possível adicionar mais registros nessa tabela!
 
 INSERT INTO `mydb`.`diretor` (`iddiretor`, `nome`) VALUES
 (1, 'Quentin Tarantino'),
@@ -99,7 +120,12 @@ INSERT INTO `mydb`.`genero` (`idgenero`, `nome`) VALUES
 (7, 'Romance'),
 (8, 'Aventura'),
 (9, 'Animação'),
-(10, 'Documentário');
+(10, 'Documentário'),
+(11, 'Comédia Romântica'),
+(12, 'Faroeste'),
+(13, 'Cult'),
+(14, 'Musical'),
+(15, 'Suspense');
 
 INSERT INTO `mydb`.`pais` (`idpais`, `nome`) VALUES
 (1, 'Estados Unidos'),
@@ -156,4 +182,5 @@ INSERT INTO `mydb`.`produtora` (`idprodutora`, `nome`, `pais_sede_idpais`) VALUE
 (18, 'Miramax', 1), 
 (19, 'Warner Bros. Pictures', 1), 
 (20, 'Universal Pictures', 1);
+
 ```
