@@ -105,6 +105,22 @@ CREATE TABLE `avaliacao` (
 
 LOCK TABLES `avaliacao` WRITE;
 /*!40000 ALTER TABLE `avaliacao` DISABLE KEYS */;
+INSERT INTO `avaliacao` VALUES
+(1,9,'Incrível! Muito emocionante.',1,7),
+(2,8,'Adorei a história e os efeitos especiais.',2,8),
+(3,10,'Um clássico que todos devem assistir.',3,9),
+(4,9,'Muito bem feito, atuação excelente.',4,10),
+(5,7,'Interessante, mas um pouco confuso.',5,11),
+(6,8,'A trama é envolvente do início ao fim.',6,12),
+(7,9,'Uma obra-prima visual.',7,13),
+(8,10,'Inspirador e comovente.',8,14),
+(9,8,'Um filme para ver e rever.',9,15),
+(10,9,'Muito bem dirigido e escrito.',10,7),
+(11,7,'Gostei, mas achei um pouco longo.',11,8),
+(12,10,'Um dos melhores filmes que já vi.',12,9),
+(13,8,'Ótima trilha sonora e efeitos.',13,10),
+(14,9,'Uma história que te prende do começo ao fim.',14,11),
+(15,10,'Simplesmente espetacular.',15,12);
 /*!40000 ALTER TABLE `avaliacao` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -215,9 +231,8 @@ INSERT INTO `diretor` VALUES
 (13,'Akira Kurosawa'),
 (15,'Tim Burton'),
 (16,'James Cameron'),
-(17, 'Stanley Kubrick'),
-(18, 'Peter Jackson');
-
+(17,'Stanley Kubrick'),
+(18,'Peter Jackson');
 /*!40000 ALTER TABLE `diretor` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -245,6 +260,25 @@ CREATE TABLE `dublagem` (
 
 LOCK TABLES `dublagem` WRITE;
 /*!40000 ALTER TABLE `dublagem` DISABLE KEYS */;
+INSERT INTO `dublagem` VALUES
+(7,1),
+(9,1),
+(11,1),
+(13,1),
+(15,1),
+(7,2),
+(9,2),
+(11,2),
+(13,2),
+(15,2),
+(8,3),
+(10,3),
+(12,3),
+(14,3),
+(8,4),
+(10,4),
+(12,4),
+(14,4);
 /*!40000 ALTER TABLE `dublagem` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -272,6 +306,25 @@ CREATE TABLE `elenco` (
 
 LOCK TABLES `elenco` WRITE;
 /*!40000 ALTER TABLE `elenco` DISABLE KEYS */;
+INSERT INTO `elenco` VALUES
+(7,20),
+(7,21),
+(8,22),
+(8,23),
+(9,24),
+(9,25),
+(10,26),
+(10,27),
+(11,28),
+(11,29),
+(12,30),
+(12,31),
+(13,32),
+(13,33),
+(14,34),
+(14,35),
+(15,36),
+(15,37);
 /*!40000 ALTER TABLE `elenco` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -300,6 +353,22 @@ CREATE TABLE `espectador` (
 
 LOCK TABLES `espectador` WRITE;
 /*!40000 ALTER TABLE `espectador` DISABLE KEYS */;
+INSERT INTO `espectador` VALUES
+(1,'Ana Silva',25,12,1),
+(2,'Carlos Mendes',32,20,2),
+(3,'Fernanda Costa',28,15,3),
+(4,'Lucas Pereira',22,8,4),
+(5,'Mariana Santos',30,18,5),
+(6,'Pedro Lima',35,25,6),
+(7,'Roberta Rocha',27,10,7),
+(8,'Thiago Souza',31,22,8),
+(9,'Vanessa Oliveira',26,14,9),
+(10,'João Gonçalves',29,17,10),
+(11,'Laura Martins',33,21,11),
+(12,'Paulo Ferreira',24,9,12),
+(13,'Juliana Almeida',28,16,13),
+(14,'Ricardo Ribeiro',30,19,14),
+(15,'Patrícia Carvalho',27,13,15);
 /*!40000 ALTER TABLE `espectador` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -339,15 +408,21 @@ CREATE TABLE `filme` (
 LOCK TABLES `filme` WRITE;
 /*!40000 ALTER TABLE `filme` DISABLE KEYS */;
 INSERT INTO `filme` VALUES
-(7, 'The Matrix', 136, 1999, 'Um programador de computador descobre que a realidade é uma simulação e se junta a uma rebelião para libertar a humanidade.', 6, 1, 17, 5),
-(8, 'Forrest Gump', 142, 1994, 'A história de um homem simples com um coração puro que testemunha e influencia eventos históricos importantes.', 5, 2, 12, 10),
-(9, 'The Godfather', 175, 1972, 'O patriarca envelhecido de uma dinastia do crime organizado transfere o controle do seu império clandestino para seu filho relutante.', 6, 3, 11, 9),
-(10, 'The Dark Knight', 152, 2008, 'Batman enfrenta o Coringa, um criminoso maquiavélico que semeia o caos e desafia a justiça de Gotham.', 6, 4, 3, 3),
-(11, 'Fight Club', 139, 1999, 'Um homem descontente com a sua vida forma um clube de luta clandestino com um vendedor de sabonetes.', 6, 5, 3, 2),
-(12, 'Interstellar', 169, 2014, 'Um grupo de exploradores viaja através de um buraco de minhoca no espaço em uma tentativa de assegurar a sobrevivência da humanidade.', 5, 6, 3, 2),
-(13, 'Gladiator', 155, 2000, 'Um general romano traído busca vingança contra o imperador corrupto que assassinou sua família e o condenou à escravidão.', 5, 7, 11, 6),
-(14, 'The Shawshank Redemption', 142, 1994, 'Dois homens presos formam um vínculo ao longo dos anos, encontrando consolo e redenção através de atos de decência comum.', 5, 8, 12, 7),
-(15, 'Titanic', 195, 1997, 'Uma jovem aristocrata se apaixona por um artista gentil, mas pobre, a bordo do luxuoso e infeliz R.M.S. Titanic.', 5, 9, 16, 8);
+(1,'A Origem',148,2010,'Um ladrão que rouba segredos empresariais através da utilização de tecnologia de partilha de sonhos recebe a tarefa inversa de plantar uma ideia na mente de um diretor executivo.',5,1,3,2),
+(2,'Jurassic Park',127,1993,'Durante uma visita de antevisão, um parque temático sofre uma grande falha de energia que permite que as suas exposições de dinossauros clonados se descontrolem.',3,2,12,16),
+(3,'Pulp Fiction',154,1994,'As vidas de dois assassinos da máfia, um pugilista, um gangster e a sua mulher, e um par de bandidos de um restaurante entrelaçam-se em quatro histórias de violência e redenção.',6,16,1,2),
+(4,'The Social Network',120,2010,'A história dos fundadores do site Web de redes sociais, Facebook.',4,5,3,1),
+(5,'Avatar',162,2009,'Um fuzileiro paraplégico enviado para a lua Pandora numa missão única fica dividido entre cumprir as suas ordens e proteger o mundo que sente ser a sua casa.',5,4,16,17),
+(6,'Barbie',114,2023,'Depois de ser expulsa da Barbieland por ser uma boneca de aparência menos do que perfeita, Barbie parte para o mundo humano em busca da verdadeira felicidade.',3,17,4,14),
+(7,'The Matrix',136,1999,'Um programador de computador descobre que a realidade é uma simulação e se junta a uma rebelião para libertar a humanidade.',6,1,17,5),
+(8,'Forrest Gump',142,1994,'A história de um homem simples com um coração puro que testemunha e influencia eventos históricos importantes.',5,2,12,10),
+(9,'The Godfather',175,1972,'O patriarca envelhecido de uma dinastia do crime organizado transfere o controle do seu império clandestino para seu filho relutante.',6,3,11,9),
+(10,'The Dark Knight',152,2008,'Batman enfrenta o Coringa, um criminoso maquiavélico que semeia o caos e desafia a justiça de Gotham.',6,4,3,3),
+(11,'Fight Club',139,1999,'Um homem descontente com a sua vida forma um clube de luta clandestino com um vendedor de sabonetes.',6,5,3,2),
+(12,'Interstellar',169,2014,'Um grupo de exploradores viaja através de um buraco de minhoca no espaço em uma tentativa de assegurar a sobrevivência da humanidade.',5,6,3,2),
+(13,'Gladiator',155,2000,'Um general romano traído busca vingança contra o imperador corrupto que assassinou sua família e o condenou à escravidão.',5,7,11,6),
+(14,'The Shawshank Redemption',142,1994,'Dois homens presos formam um vínculo ao longo dos anos, encontrando consolo e redenção através de atos de decência comum.',5,8,12,7),
+(15,'Titanic',195,1997,'Uma jovem aristocrata se apaixona por um artista gentil, mas pobre, a bordo do luxuoso e infeliz R.M.S. Titanic.',5,9,16,8);
 /*!40000 ALTER TABLE `filme` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -375,6 +450,25 @@ CREATE TABLE `filme_has_genero` (
 
 LOCK TABLES `filme_has_genero` WRITE;
 /*!40000 ALTER TABLE `filme_has_genero` DISABLE KEYS */;
+INSERT INTO `filme_has_genero` VALUES
+(7,1),
+(10,1),
+(13,1),
+(7,2),
+(12,2),
+(8,3),
+(9,3),
+(11,3),
+(14,3),
+(8,4),
+(15,4),
+(9,5),
+(10,6),
+(11,7),
+(12,8),
+(14,8),
+(13,9),
+(15,9);
 /*!40000 ALTER TABLE `filme_has_genero` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -475,6 +569,25 @@ CREATE TABLE `legenda` (
 
 LOCK TABLES `legenda` WRITE;
 /*!40000 ALTER TABLE `legenda` DISABLE KEYS */;
+INSERT INTO `legenda` VALUES
+(7,1),
+(9,1),
+(11,1),
+(13,1),
+(15,1),
+(7,2),
+(9,2),
+(11,2),
+(13,2),
+(15,2),
+(8,3),
+(10,3),
+(12,3),
+(14,3),
+(8,4),
+(10,4),
+(12,4),
+(14,4);
 /*!40000 ALTER TABLE `legenda` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -588,21 +701,23 @@ CREATE TABLE `produtora` (
 LOCK TABLES `produtora` WRITE;
 /*!40000 ALTER TABLE `produtora` DISABLE KEYS */;
 INSERT INTO `produtora` VALUES
-(1, 'Warner Bros', 1),
-(2, 'Universal Pictures', 1),
-(3, 'Paramount Pictures', 1),
-(4, '20th Century Fox', 1),
-(5, 'Columbia Pictures', 1),
-(6, 'Walt Disney Pictures', 1),
-(7, 'Pixar Animation Studios', 1),
-(8, 'Sony Pictures', 1),
-(9, 'MGM', 1),
-(10, 'Lionsgate', 1),
-(11, 'New Line Cinema', 1),
-(12, 'DreamWorks', 1),
-(13, 'Legendary Pictures', 1),
-(14, 'Focus Features', 1),
-(15, 'A24', 1);
+(1,'Warner Bros',1),
+(2,'Universal Pictures',1),
+(3,'Paramount Pictures',1),
+(4,'20th Century Fox',1),
+(5,'Columbia Pictures',1),
+(6,'Walt Disney Pictures',1),
+(7,'Pixar Animation Studios',1),
+(8,'Sony Pictures',1),
+(9,'MGM',1),
+(10,'Lionsgate',1),
+(11,'New Line Cinema',1),
+(12,'DreamWorks',1),
+(13,'Legendary Pictures',1),
+(14,'Focus Features',1),
+(15,'A24',1),
+(16,'Miramax',1),
+(17,'Mattel',1);
 /*!40000 ALTER TABLE `produtora` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -627,138 +742,26 @@ CREATE TABLE `roteirista` (
 LOCK TABLES `roteirista` WRITE;
 /*!40000 ALTER TABLE `roteirista` DISABLE KEYS */;
 INSERT INTO `roteirista` VALUES
-(1, 'Aaron Sorkin'),
-(2, 'Quentin Tarantino'),
-(3, 'Christopher Nolan'),
-(4, 'Steven Zaillian'),
-(5, 'Charlie Kaufman'),
-(6, 'Paul Schrader'),
-(7, 'John Logan'),
-(8, 'David Koepp'),
-(9, 'Michael Arndt'),
-(10, 'Diablo Cody'),
-(11, 'Alan Ball'),
-(12, 'Andrew Stanton'),
-(13, 'Brad Bird'),
-(14, 'Greta Gerwig'),
-(15, 'Jordan Peele');
+(1,'Aaron Sorkin'),
+(2,'Quentin Tarantino'),
+(3,'Christopher Nolan'),
+(4,'Steven Zaillian'),
+(5,'Charlie Kaufman'),
+(6,'Paul Schrader'),
+(7,'John Logan'),
+(8,'David Koepp'),
+(9,'Michael Arndt'),
+(10,'Diablo Cody'),
+(11,'Alan Ball'),
+(12,'Andrew Stanton'),
+(13,'Brad Bird'),
+(14,'Greta Gerwig'),
+(15,'Jordan Peele'),
+(16,'Michael Crichton'),
+(17,'James Cameron');
 /*!40000 ALTER TABLE `roteirista` ENABLE KEYS */;
 UNLOCK TABLES;
 
--- espectador deve ser do pais correto
-INSERT INTO `espectador` VALUES
-(1, 'Ana Silva', 25, 12, 1),
-(2, 'Carlos Mendes', 32, 20, 2),
-(3, 'Fernanda Costa', 28, 15, 3),
-(4, 'Lucas Pereira', 22, 8, 4),
-(5, 'Mariana Santos', 30, 18, 5),
-(6, 'Pedro Lima', 35, 25, 6),
-(7, 'Roberta Rocha', 27, 10, 7),
-(8, 'Thiago Souza', 31, 22, 8),
-(9, 'Vanessa Oliveira', 26, 14, 9),
-(10, 'João Gonçalves', 29, 17, 10),
-(11, 'Laura Martins', 33, 21, 11),
-(12, 'Paulo Ferreira', 24, 9, 12),
-(13, 'Juliana Almeida', 28, 16, 13),
-(14, 'Ricardo Ribeiro', 30, 19, 14),
-(15, 'Patrícia Carvalho', 27, 13, 15);
-
-INSERT INTO `avaliacao` VALUES
-(1, 9, 'Incrível! Muito emocionante.', 1, 7),
-(2, 8, 'Adorei a história e os efeitos especiais.', 2, 8),
-(3, 10, 'Um clássico que todos devem assistir.', 3, 9),
-(4, 9, 'Muito bem feito, atuação excelente.', 4, 10),
-(5, 7, 'Interessante, mas um pouco confuso.', 5, 11),
-(6, 8, 'A trama é envolvente do início ao fim.', 6, 12),
-(7, 9, 'Uma obra-prima visual.', 7, 13),
-(8, 10, 'Inspirador e comovente.', 8, 14),
-(9, 8, 'Um filme para ver e rever.', 9, 15),
-(10, 9, 'Muito bem dirigido e escrito.', 10, 7),
-(11, 7, 'Gostei, mas achei um pouco longo.', 11, 8),
-(12, 10, 'Um dos melhores filmes que já vi.', 12, 9),
-(13, 8, 'Ótima trilha sonora e efeitos.', 13, 10),
-(14, 9, 'Uma história que te prende do começo ao fim.', 14, 11),
-(15, 10, 'Simplesmente espetacular.', 15, 12);
-
-INSERT INTO `elenco` VALUES
-(7, 20),
-(7, 21),
-(8, 22),
-(8, 23),
-(9, 24),
-(9, 25),
-(10, 26),
-(10, 27),
-(11, 28),
-(11, 29),
-(12, 30),
-(12, 31),
-(13, 32),
-(13, 33),
-(14, 34),
-(14, 35),
-(15, 36),
-(15, 37);
-
-INSERT INTO `filme_has_genero` VALUES
-(7, 1),
-(7, 2),
-(8, 3),
-(8, 4),
-(9, 5),
-(9, 3),
-(10, 1),
-(10, 6),
-(11, 3),
-(11, 7),
-(12, 2),
-(12, 8),
-(13, 9),
-(13, 1),
-(14, 3),
-(14, 8),
-(15, 4),
-(15, 9);
-
-INSERT INTO `dublagem` VALUES
-(7, 1),
-(7, 2),
-(8, 3),
-(8, 4),
-(9, 1),
-(9, 2),
-(10, 3),
-(10, 4),
-(11, 1),
-(11, 2),
-(12, 3),
-(12, 4),
-(13, 1),
-(13, 2),
-(14, 3),
-(14, 4),
-(15, 1),
-(15, 2);
-
-INSERT INTO `legenda` VALUES
-(7, 1),
-(7, 2),
-(8, 3),
-(8, 4),
-(9, 1),
-(9, 2),
-(10, 3),
-(10, 4),
-(11, 1),
-(11, 2),
-(12, 3),
-(12, 4),
-(13, 1),
-(13, 2),
-(14, 3),
-(14, 4),
-(15, 1),
-(15, 2);
 --
 -- Dumping routines for database 'mydb'
 --
@@ -772,4 +775,4 @@ INSERT INTO `legenda` VALUES
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*M!100616 SET NOTE_VERBOSITY=@OLD_NOTE_VERBOSITY */;
 
--- Dump completed on 2024-06-26 15:19:58
+-- Dump completed on 2024-06-26 17:07:46
