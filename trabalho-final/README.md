@@ -10,9 +10,15 @@
     
 - [X] As tabelas devem contemplar o uso de default, check, primary key e foreign key (sempre que necessário) em conformidade com os ajustes sinalizados na primeira etapa da entrega do trabalho. 
 
-- [X] INSERT, no mínimo 15 registros em cada tabela (se possível). 
+- [ ] INSERT, no mínimo 15 registros em cada tabela (se possível). 
+
+   - [ ] Falta genero e premio!
 
 - [ ] Um DELETE e um UPDATE em alguma tabela. 
+
+```sql
+delete from diretor where nome like 'Peter Jackson';
+```
 
 ## A aplicação deve efetuar também as seguintes consultas separadamente:  
 
