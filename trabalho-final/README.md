@@ -10,7 +10,7 @@
     
 - [X] As tabelas devem contemplar o uso de default, check, primary key e foreign key (sempre que necessário) em conformidade com os ajustes sinalizados na primeira etapa da entrega do trabalho. 
 
-- [ ] INSERT, no mínimo 15 registros em cada tabela (se possível). 
+- [X] INSERT, no mínimo 15 registros em cada tabela (se possível). 
 
 - [ ] Um DELETE e um UPDATE em alguma tabela. 
 
