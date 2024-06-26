@@ -502,7 +502,12 @@ INSERT INTO `genero` VALUES
 (7,'Romance'),
 (8,'Aventura'),
 (9,'Animação'),
-(10,'Documentário');
+(10,'Documentário'),
+(11,'Comédia Romântica'),
+(12,'Faroeste'),
+(13,'Cult'),
+(15,'Suspense'),
+(16,'Policial');
 /*!40000 ALTER TABLE `genero` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -775,4 +780,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*M!100616 SET NOTE_VERBOSITY=@OLD_NOTE_VERBOSITY */;
 
--- Dump completed on 2024-06-26 17:07:46
+-- Dump completed on 2024-06-26 17:52:35
