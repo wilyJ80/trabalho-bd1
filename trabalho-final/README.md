@@ -12,12 +12,14 @@
 
 - [ ] INSERT, no mínimo 15 registros em cada tabela (se possível). 
 
-   - [ ] Falta genero e premio!
+   - [X] Falta genero
+
+   - [ ] Falta premio
 
 - [ ] Um DELETE e um UPDATE em alguma tabela. 
 
 ```sql
-delete from diretor where nome like 'Peter Jackson';
+DELETE FROM diretor WHERE nome LIKE 'Peter Jackson';
 ```
 
 ## A aplicação deve efetuar também as seguintes consultas separadamente:  
