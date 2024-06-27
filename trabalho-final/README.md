@@ -50,6 +50,14 @@ SELECT * FROM espectador ORDER BY n_filmes_assistidos;
 
 - [ ] SELECT com GROUP BY E HAVING. 
 
+```sql
+SELECT genero_idgenero, count(*) FROM filme_has_genero 
+GROUP BY genero_idgenero 
+HAVING count(*) > 1;
+```
+
+![](img/selectgroupbyhaving.png)
+
 ---
 
 - [ ] SELECT com JOIN com duas tabelas 
