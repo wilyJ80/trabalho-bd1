@@ -60,15 +60,13 @@ HAVING count(*) > 1;
 
 ---
 
-- [ ] SELECT com JOIN com duas tabelas 
+- [X] SELECT com JOIN com duas tabelas 
 ```sql
 use mydb;
 SELECT es.idespectador, es.nome, es.idade, av.nota, av.comentario
 FROM espectador es INNER JOIN avaliacao av ON es.idespectador = av.espectador_idespectador
 ```
-
-
-- [ ] SELECT com JOIN com três tabelas 
+- [X] SELECT com JOIN com três tabelas 
 ```sql
 use mydb;
 SELECT f.idfilme, f.nome, f.descricao, a.nome
@@ -77,7 +75,7 @@ INNER JOIN elenco e ON f.idfilme = e.filme_idfilme
 INNER JOIN ator a ON a.idator = e.ator_idator
 ```
 
-- [ ] SELECT com JOIN com quatro tabelas 
+- [X] SELECT com JOIN com quatro tabelas 
 ```sql
 USE mydb;
 SELECT f.idfilme, f.nome, f.descricao,d.nome as diretor_principal,p.nome as produtora,r.nome as roteirista_principal
@@ -87,7 +85,7 @@ INNER JOIN produtora p ON f.produtora_idprodutora = p.idprodutora
 INNER JOIN roteirista r ON f.roteirista_principal_idroteirista = r.idroteirista
 ```
 
-- [ ] SELECT com JOIN com no mínimo 3 tabelas, group by e having 
+- [X] SELECT com JOIN com no mínimo 3 tabelas, group by e having 
 ```sql
 use mydb;
 SELECT  f.nome,f.descricao, AVG(av.nota) as nota, count(p.nome) as quantidade_premios
@@ -100,7 +98,15 @@ HAVING AVG(av.nota) > 8
 
 - [ ] SELECT com JOIN com no mínimo 3 tabelas, group by (diferente do item h) 
 
----
+-
 
-- [ ] SELECT com JOIN com no mínimo 2 tabelas, Where, group by e having (diferente do item h e i) 
+- [X] SELECT com JOIN com no mínimo 2 tabelas, Where, group by e having (diferente do item h e i) 
+```sql
+USE mydb;
+SELECT pais.nome as pais,count(es.nome) as quantidade_pessoas, ROUND(AVG(es.idade),2) as media_idade
+FROM espectador es
+INNER JOIN pais ON pais.idpais = es.pais_idpais
+GROUP BY pais
+HAVING AVG(es.idade) > 27
 
+```
