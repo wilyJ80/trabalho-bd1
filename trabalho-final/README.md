@@ -24,7 +24,13 @@ UPDATE espectador SET nome = 'Victor Hugo' WHERE idespectador = 15;
 
 ## A aplicação deve efetuar também as seguintes consultas separadamente:  
 
-- [ ] SELECT com LIKE. 
+- [X] SELECT com LIKE. 
+
+```sql
+SELECT * FROM ator WHERE nome LIKE 'Chris%';
+```
+
+![](img/selectlike.png)
 
 - [ ] SELECT com order by. 
 

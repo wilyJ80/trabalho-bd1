@@ -16,9 +16,6 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*M!100616 SET @OLD_NOTE_VERBOSITY=@@NOTE_VERBOSITY, NOTE_VERBOSITY=0 */;
 
-CREATE DATABASE IF NOT EXISTS mydb;
-USE mydb;
-
 --
 -- Table structure for table `ator`
 --
@@ -366,16 +363,16 @@ LOCK TABLES `espectador` WRITE;
 /*!40000 ALTER TABLE `espectador` DISABLE KEYS */;
 INSERT INTO `espectador` VALUES
 (1,'Ana Silva',25,12,16),
-(2,'Carlos Mendes',32,20,16),
+(2,'Carlos Mendes',32,20,6),
 (3,'Fernanda Costa',28,15,16),
 (4,'Lucas Pereira',22,8,16),
-(5,'Mariana Santos',30,18,16),
+(5,'Mariana Santos',30,18,6),
 (6,'Pedro Lima',35,25,16),
 (7,'Roberta Rocha',27,10,16),
 (8,'Thiago Souza',31,22,16),
 (9,'Vanessa Oliveira',26,14,16),
-(10,'João Gonçalves',29,17,16),
-(11,'Laura Martins',33,21,16),
+(10,'João Gonçalves',29,17,6),
+(11,'Laura Martins',33,21,6),
 (12,'Paulo Ferreira',24,9,16),
 (13,'Juliana Almeida',28,16,16),
 (14,'Ricardo Ribeiro',30,19,16),
@@ -830,4 +827,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*M!100616 SET NOTE_VERBOSITY=@OLD_NOTE_VERBOSITY */;
 
--- Dump completed on 2024-06-27 13:55:01
+-- Dump completed on 2024-06-27 14:27:08
