@@ -370,16 +370,16 @@ INSERT INTO `espectador` VALUES
 (3,'Fernanda Costa',28,15,16),
 (4,'Lucas Pereira',22,8,16),
 (5,'Mariana Santos',30,18,6),
-(6,'Pedro Lima',35,25,16),
+(6,'Giulia Conti',35,25,5),
 (7,'Roberta Rocha',27,10,16),
-(8,'Thiago Souza',31,22,16),
+(8,'Marco Rossi',31,22,5),
 (9,'Vanessa Oliveira',26,14,16),
 (10,'João Gonçalves',29,17,6),
 (11,'Laura Martins',33,21,6),
 (12,'Paulo Ferreira',24,9,16),
 (13,'Juliana Almeida',28,16,16),
 (14,'Ricardo Ribeiro',30,19,16),
-(15,'Patrícia Carvalho',27,13,16);
+(15,'Alessandra Bianchi',27,13,5);
 /*!40000 ALTER TABLE `espectador` ENABLE KEYS */;
 UNLOCK TABLES;
 
