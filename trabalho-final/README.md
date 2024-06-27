@@ -1,3 +1,5 @@
+# ALUNOS: ALYSSON OLIVEIRA, KAIK COSTA, VICTOR BITENCOURT
+
 ![](bdSQL.svg)
 
 # Requisitos mínimos do sistema (2ª etapa) 
@@ -22,6 +24,8 @@ DELETE FROM diretor WHERE nome LIKE 'Peter Jackson';
 UPDATE espectador SET nome = 'Victor Hugo' WHERE idespectador = 15;
 ```
 
+---
+
 ## A aplicação deve efetuar também as seguintes consultas separadamente:  
 
 - [X] SELECT com LIKE. 
@@ -32,19 +36,41 @@ SELECT * FROM ator WHERE nome LIKE 'Chris%';
 
 ![](img/selectlike.png)
 
-- [ ] SELECT com order by. 
+---
+
+- [X] SELECT com order by. 
+
+```sql
+SELECT * FROM espectador ORDER BY n_filmes_assistidos;
+```
+
+![](img/selectorder.png)
+
+---
 
 - [ ] SELECT com GROUP BY E HAVING. 
 
+---
+
 - [ ] SELECT com JOIN com duas tabelas 
+
+---
 
 - [ ] SELECT com JOIN com três tabelas 
 
+---
+
 - [ ] SELECT com JOIN com quatro tabelas 
+
+---
 
 - [ ] SELECT com JOIN com no mínimo 3 tabelas, group by e having 
 
+---
+
 - [ ] SELECT com JOIN com no mínimo 3 tabelas, group by (diferente do item h) 
+
+---
 
 - [ ] SELECT com JOIN com no mínimo 2 tabelas, Where, group by e having (diferente do item h e i) 
 
