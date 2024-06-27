@@ -61,20 +61,42 @@ HAVING count(*) > 1;
 ---
 
 - [ ] SELECT com JOIN com duas tabelas 
+```sql
+use mydb;
+SELECT es.idespectador, es.nome, es.idade, av.nota, av.comentario
+FROM espectador es INNER JOIN avaliacao av ON es.idespectador = av.espectador_idespectador
+```
 
----
 
 - [ ] SELECT com JOIN com três tabelas 
-
----
+```sql
+use mydb;
+SELECT f.idfilme, f.nome, f.descricao, a.nome
+FROM filme f
+INNER JOIN elenco e ON f.idfilme = e.filme_idfilme
+INNER JOIN ator a ON a.idator = e.ator_idator
+```
 
 - [ ] SELECT com JOIN com quatro tabelas 
-
----
+```sql
+USE mydb;
+SELECT f.idfilme, f.nome, f.descricao,d.nome as diretor_principal,p.nome as produtora,r.nome as roteirista_principal
+FROM filme f
+INNER JOIN diretor d ON f.diretor_principal_iddiretor = d.iddiretor
+INNER JOIN produtora p ON f.produtora_idprodutora = p.idprodutora
+INNER JOIN roteirista r ON f.roteirista_principal_idroteirista = r.idroteirista
+```
 
 - [ ] SELECT com JOIN com no mínimo 3 tabelas, group by e having 
-
----
+```sql
+use mydb;
+SELECT  f.nome,f.descricao, AVG(av.nota) as nota, count(p.nome) as quantidade_premios
+FROM filme f
+INNER JOIN avaliacao av on av.filme_idfilme = f.idfilme
+INNER JOIN premio p on p.filme_idfilme = f.idfilme
+GROUP BY f.nome
+HAVING AVG(av.nota) > 8
+```
 
 - [ ] SELECT com JOIN com no mínimo 3 tabelas, group by (diferente do item h) 
 
