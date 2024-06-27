@@ -372,7 +372,7 @@ INSERT INTO `espectador` VALUES
 (5,'Mariana Santos',30,18,6),
 (6,'Giulia Conti',35,25,5),
 (7,'Roberta Rocha',27,10,16),
-(8,'Marco Rossi',31,22,5),
+(8,'Marco Rossi',24,22,5),
 (9,'Vanessa Oliveira',26,14,16),
 (10,'João Gonçalves',29,17,6),
 (11,'Laura Martins',33,21,6),
