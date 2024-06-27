@@ -10,37 +10,16 @@
     
 - [X] As tabelas devem contemplar o uso de default, check, primary key e foreign key (sempre que necessário) em conformidade com os ajustes sinalizados na primeira etapa da entrega do trabalho. 
 
-- [ ] INSERT, no mínimo 15 registros em cada tabela (se possível). 
+- [X] INSERT, no mínimo 15 registros em cada tabela (se possível). 
 
-   - [X] Falta genero
-
-   - [X] Verificar correção de dados
-
-      - [X] Ator
-      - [X] Avaliacao
-      - [X] Categoria do Premio
-      - [X] Classificacao Indicativa
-      - [X] Diretor
-      - [X] Dublagem
-      - [X] Elenco
-      - [X] Espectador
-      - [X] Filme
-      - [X] Filme_has_genero
-      - [X] Genero
-      - [X] Idioma
-      - [X] Legenda
-      - [X] Pais
-      - [X] Premio
-         - [ ] Atencao: Revisar valores null, precisa mudar?
-      - [X] Produtora
-      - [X] Roteirista
-
-   - [ ] Falta premio
-
-- [ ] Um DELETE e um UPDATE em alguma tabela. 
+- [X] Um DELETE e um UPDATE em alguma tabela. 
 
 ```sql
 DELETE FROM diretor WHERE nome LIKE 'Peter Jackson';
+```
+
+```sql
+UPDATE espectador SET nome = 'Victor Hugo' WHERE idespectador = 15;
 ```
 
 ## A aplicação deve efetuar também as seguintes consultas separadamente:  
