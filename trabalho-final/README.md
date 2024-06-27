@@ -14,6 +14,27 @@
 
    - [X] Falta genero
 
+   - [X] Verificar correção de dados
+
+      - [X] Ator
+      - [X] Avaliacao
+      - [X] Categoria do Premio
+      - [X] Classificacao Indicativa
+      - [X] Diretor
+      - [X] Dublagem
+      - [X] Elenco
+      - [X] Espectador
+      - [X] Filme
+      - [X] Filme_has_genero
+      - [X] Genero
+      - [X] Idioma
+      - [X] Legenda
+      - [X] Pais
+      - [X] Premio
+         - [ ] Atencao: Revisar valores null, precisa mudar?
+      - [X] Produtora
+      - [X] Roteirista
+
    - [ ] Falta premio
 
 - [ ] Um DELETE e um UPDATE em alguma tabela. 
