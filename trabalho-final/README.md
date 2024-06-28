@@ -34,7 +34,7 @@ UPDATE espectador SET nome = 'Victor Hugo' WHERE idespectador = 15;
 SELECT * FROM ator WHERE nome LIKE 'Chris%';
 ```
 
-![](img/selectlike.png)
+![](img/selectlike2.png)
 
 ---
 
@@ -44,11 +44,11 @@ SELECT * FROM ator WHERE nome LIKE 'Chris%';
 SELECT * FROM espectador ORDER BY n_filmes_assistidos;
 ```
 
-![](img/selectorder.png)
+![](img/selectorder2.png)
 
 ---
 
-- [ ] SELECT com GROUP BY E HAVING. 
+- [X] SELECT com GROUP BY E HAVING. 
 
 ```sql
 SELECT genero_idgenero, count(*) FROM filme_has_genero 
@@ -56,28 +56,34 @@ GROUP BY genero_idgenero
 HAVING count(*) > 1;
 ```
 
-![](img/selectgroupbyhaving.png)
+![](img/selectgroupbyhavingnew.png)
 
 ---
 
 - [X] SELECT com JOIN com duas tabelas 
 ```sql
-use mydb;
 SELECT es.idespectador, es.nome, es.idade, av.nota, av.comentario
 FROM espectador es INNER JOIN avaliacao av ON es.idespectador = av.espectador_idespectador
 ```
+
+![](img/selectjoinin2.png)
+
+---
+
 - [X] SELECT com JOIN com três tabelas 
 ```sql
-use mydb;
 SELECT f.idfilme, f.nome, f.descricao, a.nome
 FROM filme f
 INNER JOIN elenco e ON f.idfilme = e.filme_idfilme
 INNER JOIN ator a ON a.idator = e.ator_idator
 ```
 
+![](img/selectjoinin3.png)
+
+---
+
 - [X] SELECT com JOIN com quatro tabelas 
 ```sql
-USE mydb;
 SELECT f.idfilme, f.nome, f.descricao,d.nome as diretor_principal,p.nome as produtora,r.nome as roteirista_principal
 FROM filme f
 INNER JOIN diretor d ON f.diretor_principal_iddiretor = d.iddiretor
@@ -85,9 +91,12 @@ INNER JOIN produtora p ON f.produtora_idprodutora = p.idprodutora
 INNER JOIN roteirista r ON f.roteirista_principal_idroteirista = r.idroteirista
 ```
 
+![](img/selectjoinin4.png)
+
+---
+
 - [X] SELECT com JOIN com no mínimo 3 tabelas, group by e having 
 ```sql
-use mydb;
 SELECT  f.nome,f.descricao, AVG(av.nota) as nota, count(p.nome) as quantidade_premios
 FROM filme f
 INNER JOIN avaliacao av on av.filme_idfilme = f.idfilme
@@ -96,10 +105,13 @@ GROUP BY f.nome
 HAVING AVG(av.nota) > 8
 ```
 
+![](img/seljoinmin3gbh.png)
+
+---
+
 - [X] SELECT com JOIN com no mínimo 3 tabelas, group by (diferente do item h) 
 
 ```sql
-USE mydb;
 SELECT COUNT(f.idfilme) AS quantidade_filmes, i.nome_idioma as legendas_disponiveis, g.nome
 FROM filme f
 INNER JOIN legenda ON legenda.filme_idfilme = f.idfilme
@@ -109,9 +121,12 @@ INNER JOIN genero g ON fg.genero_idgenero = g.idgenero
 GROUP BY i.nome_idioma, g.nome
 ```
 
+![](img/seljoinpen.png)
+
+---
+
 - [X] SELECT com JOIN com no mínimo 2 tabelas, Where, group by e having (diferente do item h e i) 
 ```sql
-USE mydb;
 SELECT pais.nome as pais,count(es.nome) as quantidade_pessoas, ROUND(AVG(es.idade),2) as media_idade
 FROM espectador es
 INNER JOIN pais ON pais.idpais = es.pais_idpais
@@ -120,3 +135,5 @@ GROUP BY pais
 HAVING AVG(es.idade) > 27
 
 ```
+
+![](img/seljoinlast.png)
