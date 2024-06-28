@@ -96,9 +96,18 @@ GROUP BY f.nome
 HAVING AVG(av.nota) > 8
 ```
 
-- [ ] SELECT com JOIN com no mínimo 3 tabelas, group by (diferente do item h) 
+- [X] SELECT com JOIN com no mínimo 3 tabelas, group by (diferente do item h) 
 
--
+```sql
+USE mydb;
+SELECT COUNT(f.idfilme) AS quantidade_filmes, i.nome_idioma as legendas_disponiveis, g.nome
+FROM filme f
+INNER JOIN legenda ON legenda.filme_idfilme = f.idfilme
+INNER JOIN idioma i ON legenda.idioma_ididioma = i.ididioma
+INNER JOIN filme_has_genero  fg ON fg.filme_idfilmes = f.idfilme
+INNER JOIN genero g ON fg.genero_idgenero = g.idgenero
+GROUP BY i.nome_idioma, g.nome
+```
 
 - [X] SELECT com JOIN com no mínimo 2 tabelas, Where, group by e having (diferente do item h e i) 
 ```sql
@@ -106,6 +115,7 @@ USE mydb;
 SELECT pais.nome as pais,count(es.nome) as quantidade_pessoas, ROUND(AVG(es.idade),2) as media_idade
 FROM espectador es
 INNER JOIN pais ON pais.idpais = es.pais_idpais
+WHERE es.nome LIKE '%s'
 GROUP BY pais
 HAVING AVG(es.idade) > 27
 
