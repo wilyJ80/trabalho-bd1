@@ -13,10 +13,10 @@ Trigger funcionando!
 
 # Questao 2
 
-1. Nao precisa excluir e recriar o gatilho de estoques, vou carregar o codigo do trigger que salvei em um arquivo.
+1. Excluir trigger
 2. Mostrar e carregar `gatilho_estoques.sql`
-3. Mostrar triggers
+3. Mostrar ambos os triggers presentes
 4. Mostrar vendas, estoques, fabricacao_prevista
-5. Carregar `delete2.sql`
+5. Mostrar e carregar `delete2.sql`
 6. Mostrar novamente vendas, estoques, fabricacao_prevista
 
