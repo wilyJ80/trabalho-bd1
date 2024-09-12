@@ -1,9 +1,9 @@
 # Questao 1
 
-1. Carregar o banco `gatilho_semtrigger.sql`
+1. Carregar o banco `gatilho_semtrigger_2024.sql`
 2. Mostrar dados: produto, vendas, estoques
-3. Carregar trigger `gatilho_excluir_venda.sql`
-4. Mostrar triggers
+3. Mostrar arquivo trigger a ser executado
+4. Carregar trigger `gatilho_excluir_venda.sql`
 5. Mostrar e carregar `insert.sql`
 6. Mostrar dados: vendas e estoques
 7. Mostrar e carregar `delete.sql`
